@@ -69,4 +69,4 @@ jobs:
           token: ${{ secrets.HELM_CHARTS_PAT }}
           repository: cloudfieldcz/CZERTAINLY-Helm-Charts
           event-type: update-chart-version
-          client-payload: '{"chart": "czertainly", "version": "${{ github.ref_name }}"}'
+          client-payload: '{"chart": "fe-administrator", "version": "${{ github.ref_name }}"}'
