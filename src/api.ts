@@ -6,6 +6,7 @@ import {
     AuditLogApi,
     AuthenticationManagementApi,
     AuthorityManagementApi,
+    CBOMManagementApi,
     CMPProfileManagementApi,
     CallbackApi,
     CertificateInventoryApi,
@@ -15,6 +16,7 @@ import {
     ComplianceProfileManagementV2Api,
     Configuration,
     ConnectorManagementApi,
+    ConnectorManagementV2Api,
     CredentialManagementApi,
     CryptographicKeyManagementApi,
     CryptographicOperationsControllerApi,
@@ -66,10 +68,12 @@ export interface ApiClients {
     raProfiles: RAProfileManagementApi;
     credentials: CredentialManagementApi;
     connectors: ConnectorManagementApi;
+    connectorsV2: ConnectorManagementV2Api;
     proxies: ProxyManagementApi;
     callback: CallbackApi;
     statisticsDashboard: StatisticsDashboardApi;
     authorities: AuthorityManagementApi;
+    cbomManagement: CBOMManagementApi;
     entities: EntityManagementApi;
     resources: ResourceManagementApi;
     locations: LocationManagementApi;
@@ -117,6 +121,7 @@ export const backendClient: ApiClients = {
     raProfiles: new RAProfileManagementApi(configuration),
     credentials: new CredentialManagementApi(configuration),
     authorities: new AuthorityManagementApi(configuration),
+    cbomManagement: new CBOMManagementApi(configuration),
     entities: new EntityManagementApi(configuration),
     resources: new ResourceManagementApi(configuration),
     locations: new LocationManagementApi(configuration),
@@ -149,6 +154,7 @@ export const backendClient: ApiClients = {
     cryptographicKeys: new CryptographicKeyManagementApi(configuration),
     cryptographicOperations: new CryptographicOperationsControllerApi(configuration),
     oids: new CustomOIDManagementApi(configuration),
+    connectorsV2: new ConnectorManagementV2Api(configuration),
 };
 
 export const updateBackendUtilsClients = (url: string | undefined) => {

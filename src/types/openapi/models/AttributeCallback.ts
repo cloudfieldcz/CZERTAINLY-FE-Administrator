@@ -27,7 +27,7 @@ export interface AttributeCallback {
      */
     callbackContext?: string;
     /**
-     * HTTP method of the callback
+     * HTTP method of the callback. This value is required for connector callbacks and optional only for callbacks defined on resource objects.
      * @type {string}
      * @memberof AttributeCallback
      */

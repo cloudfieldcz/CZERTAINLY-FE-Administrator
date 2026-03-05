@@ -48,9 +48,11 @@ import tokenProfileEpics from './token-profiles-epics';
 import tokenEpics from './tokens-epics';
 import usersEpics from './users-epics';
 import utilsActuatorEpics from './utilsActuator-epics';
+import cbomActuatorEpics from './cbomActuator-epics';
 import utilsCertificateEpics from './utilsCertificate-epics';
 import utilsCertificateRequestEpics from './utilsCertificateRequest-epics';
 import utilsOidEpics from './utilsOid-epics';
+import cbomEpics from './cbom-epics';
 import loginEpics from './login-epics';
 
 export interface EpicDependencies {
@@ -106,6 +108,8 @@ export const epics = combineEpics(
     ...utilsCertificateEpics,
     ...utilsCertificateRequestEpics,
     ...utilsActuatorEpics,
+    ...cbomActuatorEpics,
     ...oidsEpics,
+    ...cbomEpics,
     ...loginEpics,
 );
