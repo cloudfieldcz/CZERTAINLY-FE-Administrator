@@ -54,7 +54,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
@@ -69,4 +69,4 @@ jobs:
           token: ${{ secrets.HELM_CHARTS_PAT }}
           repository: cloudfieldcz/CZERTAINLY-Helm-Charts
           event-type: update-chart-version
-          client-payload: '{"chart": "czertainly", "version": "${{ github.ref_name }}"}'
+          client-payload: '{"chart": "fe-administrator", "version": "${{ github.ref_name }}"}'
